@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "test": "vitest"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -55,20 +56,28 @@
     "react-hook-form": "^7.53.1",
     "react-resizable-panels": "^2.1.6",
     "recharts": "^2.13.3",
+    "sequelize": "^6.37.5",
     "sonner": "^1.7.0",
+    "sqlite3": "^5.1.7",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.3",
     "eslint": "^8",
     "eslint-config-next": "15.0.2",
+    "jsdom": "^25.0.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "vitest": "^2.1.4"
   }
 }

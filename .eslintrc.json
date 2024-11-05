@@ -12,7 +12,12 @@
   ],
   "rules": {
     "prettier/prettier": [
-      "error"
-    ]
+      "error",
+      {
+        "indent": "off",
+        "singleQuote": false
+      }
+    ],
+    "indent": "off"
   }
 }
