@@ -1,8 +1,8 @@
 import { test } from "vitest";
-import database from "../lib/database";
+import sequelize from "../lib/sequelize";
 
 test("Database Connnection", async ({ onTestFailed }) => {
-  await database.authenticate();
+  await sequelize.authenticate();
 
   onTestFailed((e) => {
     console.log(e);
