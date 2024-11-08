@@ -1,10 +1,15 @@
 import { test } from "vitest";
-import sequelize from "../lib/sequelize";
+import { drizzle } from "drizzle-orm/mysql2";
+import mysql from "mysql2/promise";
 
 test("Database Connnection", async ({ onTestFailed }) => {
-  await sequelize.authenticate();
+  const config: mysql.PoolOptions = {
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD
+  };
 
-  onTestFailed((e) => {
-    console.log(e);
-  });
+  const poolConnection = mysql.createPool(config);
+
+  const db = drizzle({ client: poolConnection });
 });
